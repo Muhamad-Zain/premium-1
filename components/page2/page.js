@@ -22,7 +22,12 @@ export default function Page2({data, id}) {
                     <AnimateSee>
                     <div className='text-center sm:text-start sm:ml-10  p-10 relative z-10 '>
                         <p>The Wedding Of</p>
-                        <h3 className='text-3xl playfair font-bold sm:text-4xl py-2'>{data?.name?.mens} & {data?.name?.grils}</h3>
+                        <h3 className="text-3xl playfair font-bold sm:text-4xl py-2 text-center flex flex-wrap justify-center gap-x-2">
+                        <span className="whitespace-nowrap flex-1 text-center">{data?.name?.mens}</span>
+                        <span className="w-full text-center">&</span>
+                        <span className="whitespace-nowrap flex-1 text-center">{data?.name?.grils}</span>
+                        </h3>
+                        {/* <h3 className='text-3xl playfair font-bold sm:text-4xl py-2'>{data?.name?.mens} & {data?.name?.grils}</h3> */}
                         <p>{data?.date?.resepsi}</p>
                     </div>
                     </AnimateSee>

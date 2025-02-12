@@ -86,9 +86,12 @@ export default function App({id, name}) {
             setData(data)
         }
         getData()
+
     },[])
-    return(
-        <section className="sm:px-20 relative">
+    console.log(data);
+    
+    return( data ?
+        (<section className="sm:px-20 relative">
             <Page1 id={id} btn={btnElement}  data={data} name={name} />
             <div id="page2">
                 <Page2 id={id} data={data} />
@@ -146,7 +149,10 @@ export default function App({id, name}) {
                 </button>
             </div>
             {/* null} */}
-        </section>
+        </section>) 
+        : (
+            <h1>ID tidak ada</h1>
+        )
     )
 }
 App.propTypes = {

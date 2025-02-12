@@ -18,38 +18,41 @@ export default function Page5({data}) {
     }, []);
 
     const renderer = ({days, hours, minutes, seconds, completed }) => {
-        if (completed) {
+      if (completed) {
+            // return setSave(false)
           // Render a completed state
-          return (<span>Hari Penikahan Telah Tiba!!</span>);
+          return (<span className="text-xl">Hari Penikahan Telah Tiba!!</span>);
         } else {
           // Render a countdown
           return (
-              <div style={{  fontSize: '2rem', textAlign: 'center' }} className="flex w-[90%] py-5 sm:w-3/4 lg:w-1/3 m-auto font-serif text-white p-2 justify-between">
+              <><div style={{ fontSize: '2rem', textAlign: 'center' }} className="flex w-[90%] py-5 sm:w-3/4 lg:w-1/3 m-auto font-serif text-white p-2 justify-between">
               <div className="rounded-lg bg-white bg-opacity-10 w-[4rem] h-[3.5rem]  flex justify-center items-center">
-                   <div className="leading-6 text-xl font-bold">
-                      {days}
-                      <p className="text-sm">Days</p>
-                   </div>
+                <div className="leading-6 text-xl font-bold">
+                  {days}
+                  <p className="text-sm">Days</p>
+                </div>
               </div>
               <div className=" rounded-lg bg-white bg-opacity-15 w-[4rem] h-[3.5rem]  flex justify-center items-center">
-                   <div className="leading-6 text-xl font-bold">
-                      {hours}
-                      <p className="text-sm">Hours</p>
-                   </div>
+                <div className="leading-6 text-xl font-bold">
+                  {hours}
+                  <p className="text-sm">Hours</p>
+                </div>
               </div>
               <div className=" rounded-lg bg-white bg-opacity-15 w-[4rem] h-[3.5rem]  flex justify-center items-center">
-                   <div className="leading-6 text-xl font-bold">
-                      {minutes}
-                      <p className="text-sm">Minutes</p>
-                   </div>
+                <div className="leading-6 text-xl font-bold">
+                  {minutes}
+                  <p className="text-sm">Minutes</p>
+                </div>
               </div>
               <div className=" rounded-lg bg-white bg-opacity-15 w-[4rem] h-[3.5rem]  flex justify-center items-center">
-                   <div className="leading-6 text-xl font-bold">
-                      {seconds}
-                      <p className="text-sm">Seconds</p>
-                   </div>
+                <div className="leading-6 text-xl font-bold">
+                  {seconds}
+                  <p className="text-sm">Seconds</p>
+                </div>
               </div>
-            </div>
+            </div><button
+              onClick={handleSaveDate}
+              className="py-2 px-4 rounded-2xl bg-white bg-opacity-10">SAVE DATE</button></>
           );
         }
       };
@@ -73,10 +76,9 @@ export default function Page5({data}) {
                 {
                   isClient && 
                   <Countdown date={time} renderer={renderer} />
+                  
                 }
-                <button 
-                  onClick={handleSaveDate}
-                  className="py-2 px-4 rounded-2xl bg-white bg-opacity-10">SAVE DATE</button>
+                
             </div>
             </AnimatedSection>
         </section>

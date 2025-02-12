@@ -1,6 +1,6 @@
 'use client'
 import { addDataToFirebase, uploadFiles, auth, loginUser } from "@/components/data/firebase"
-import { signInWithEmailAndPassword } from "firebase/auth";
+// import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react"
 
 
