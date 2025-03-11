@@ -73,8 +73,63 @@ export default function AddData() {
         [name]: selectedFiles[0]
       }));
     }
+    // const { name, files: selectedFiles} = e.target
+    // if(name === "galery"){
+    //   const newFiles = Array.from(selectedFiles).map((file) => ({
+    //     file,
+    //     status: "pending",
+    //   }))
+    //   setFiles((prevFiles) => ({
+    //     ...prevFiles,
+    //     galery: [...(prevFiles.galery || []), ...newFiles],
+    //   }))
+    // } else {
+    //   setFiles((prevFiles) => ({
+    //     ...prevFiles,
+    //     [name]: [{file: selectedFiles[0], status: "pending"}]
+    //   }))
+    // }
   };
 
+//   const uploadFiles = async (id, files, categories) => {
+//     let allUploads = [];
+
+//     for (const category of categories){
+//       if(!files[category]) continue;
+//     const uploadPromises = files[category].map(async (fileObj) => {
+//       if (fileObj.status === "success") return fileObj;
+      
+//       try {
+//         const fileRef = storageRef.child(`uploads/${id}/${category}/${fileObj.file.name}`)
+//         await fileRef.put(fileObj.file)
+//         const url = await fileRef.getDownloadURL()
+
+//         return {...fileObj, status: "succes", url}
+//       } catch (error) {
+//         console.log(`Upload gagal ${fileObj.file.name} dikategory ${category}:`, error);
+        
+//         return { ...fileObj,status: "failed"}
+        
+//       }
+//     })
+//     const uploadedCategoryFiles = await Promise.all(uploadPromises)
+//     allUploads = [...allUploads, ...uploadedCategoryFiles]
+    
+//     setFiles((prevFiles) => ({
+//       ...prevFiles,
+//       [category]: uploadedCategoryFiles
+//     }))
+//   }
+//   setTimeout(() => {
+//     const failedFiles = allUploads.filter((file) => file.status === "failed")
+//     if(failedFiles.lenght >0){
+//       console.log("mengulangi upload file yang gagal");
+//       uploadFiles(id, files, categories)
+      
+//     }
+//   }, 2000);
+//   return allUploads
+// }
 
   const [idUndangan, setIdUndangan] = useState('')
   const handleSubmit = async(e) => {
@@ -107,7 +162,7 @@ export default function AddData() {
       console.error("Error uploading files:", error);
     }
 
-    setNewId(`i-vee-new.vercel.app/${id}`)
+    setNewId(`premium-1.vercel.app/${id}`)
     alert('Berhasil kirim data ke firebase')
     
   };
