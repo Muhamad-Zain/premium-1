@@ -17,7 +17,7 @@ export default function Page2({data, id}) {
 
     return(
         <section className='sm:px-20 sm:py-20'>
-            <div style={{backgroundImage: `url(${image})`}} className={`${style.bg} w-full h-screen sm:h-[80vh] sm:shadow-lg  sm:shadow-black overflow-hidden sm:rounded-3xl`}>
+            <div style={{backgroundImage : `url(${image})`}} className={`${style.bg} w-full h-screen sm:h-[80vh] sm:shadow-lg  sm:shadow-black overflow-hidden sm:rounded-3xl`}>
                 <div className={`${style.wrap} relative z-10 h-screen sm:h-[80vh]`}>
                     <AnimateSee>
                     <div className='text-center sm:text-start sm:ml-10  p-10 relative z-10  '>

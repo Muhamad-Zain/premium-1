@@ -55,22 +55,24 @@ export default function Page9({data, id}) {
                         <div className="relative ">
                             <button 
                                 onClick={closeBtn}
-                                className="absolute top-2 sm:top-32  right-3 p-2 bg-black bg-opacity-70 rounded-full">
+                                className="absolute top-2 sm:top-2  right-3 p-2 bg-black bg-opacity-70 rounded-full">
                                 <CgCloseO className="fill-current text-xl" />
                             </button>
                             <div className="absolute top-1/2 flex justify-between w-full">
                             <button 
                                 onClick={prevImage}
-                                className="w-10 h-20 bg-black bg-opacity-70 rounded-xl flex justify-center items-center">
+                                className="w-10 h-20 ml-2 bg-black bg-opacity-70 rounded-xl flex justify-center items-center">
                                 <FaAngleDoubleLeft className="fill-current text-xl"/>
                             </button>
                             <button 
                                 onClick={nextImage}
-                                className="w-10 h-20 bg-black bg-opacity-70 rounded-xl flex justify-center items-center">
+                                className="w-10 h-20 mr-2 bg-black bg-opacity-70 rounded-xl flex justify-center items-center">
                                 <FaAngleDoubleRight />
                             </button>
                             </div>
-                            <img src={image[imgIndex]} className="w-[90vw] h-[80vh] sm:w-auto sm:h-auto border-4 border-double rounded-xl sm object-cover " />
+                            <div className="w-[92vw] h-[82vh] sm:w-[80vw] sm:h-[90vh] border-4 border-double rounded-xl  flex justify-center bg-black bg-opacity-50">
+                                <img src={image[imgIndex]} className=" sm:w-auto sm:h-auto w-auto h-auto object-cover bg-center bg-cover rounded-xl  " />
+                            </div>
                         </div>
                     </section>
                 )}

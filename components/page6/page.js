@@ -6,7 +6,7 @@ import { AnimatedSection, AnimateSee } from "../animation"
 
 export default function Page6({data, id}) {
     const [image, setImage] = useState('')
-    const [story, setStory]= useState(false)
+    // const [story, setStory]= useState(false)
     
 
     useEffect(() => {
