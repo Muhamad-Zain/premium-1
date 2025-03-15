@@ -47,7 +47,7 @@ export default function Page6({data, id}) {
                     {data?.story?.tree}
                     </p>
                     </AnimateSee>
-                    <h3 className="text-2xl py-3 font-bold playfair text-end">{data?.name?.mens} & {data?.name?.grils}</h3>
+                    <h3 className="text-xl italic  py-3 font-bold playfair text-end">{data?.name?.mens} & {data?.name?.grils}</h3>
                 </div>
             </section>
             </AnimatedSection>
